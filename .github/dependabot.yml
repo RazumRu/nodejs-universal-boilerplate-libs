@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    rebase-strategy: "disabled"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00" # utc
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    rebase-strategy: "disabled"
+    target-branch: "develop"
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00" # utc

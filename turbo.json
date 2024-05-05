@@ -1,0 +1,25 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["tsconfig.json", "tsconfig.build.json"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "inputs": ["src/**"]
+    },
+    "lint:fix": {
+      "inputs": ["src/**"]
+    },
+    "test": {
+      "inputs": ["src/**"],
+      "outputs": []
+    },
+    "test:cov": {
+      "inputs": ["src/**"],
+      "outputs": []
+    }
+  }
+}

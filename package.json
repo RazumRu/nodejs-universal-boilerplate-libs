@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-universal-boilerplate-libs",
+  "packageManager": "yarn@4.2.1",
+  "engines": {
+    "node": ">=20.12.2"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "postinstall": "yarn husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.3"
+  }
+}
