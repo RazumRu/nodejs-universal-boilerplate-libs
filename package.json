@@ -12,7 +12,8 @@
     ]
   },
   "scripts": {
-    "postinstall": "yarn husky"
+    "postinstall": "yarn husky",
+    "build:all": "yarn turbo run build"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

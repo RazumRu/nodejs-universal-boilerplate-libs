@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "lib": [ "esnext", "dom" ],
+    "types": [ "node" ],
+    "baseUrl": "./",
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "paths": {
+      "@packages/*": ["packages/*/src"]
+    }
+  },
+  "exclude": [ "node_modules", "tmp", "dist" ]
+}

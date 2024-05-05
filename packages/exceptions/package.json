@@ -1,0 +1,23 @@
+{
+  "name": "@packages/exceptions",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Sergey Razumovskiy <s.razumru@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "yarn run prebuild && yarn tsc -p tsconfig.json",
+    "prebuild": "rimraf -rf ./dist && rimraf ./tsconfig.build.tsbuildinfo",
+    "prepublish": "yarn run build"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4",
+    "@types/node": "^20.12.8",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
