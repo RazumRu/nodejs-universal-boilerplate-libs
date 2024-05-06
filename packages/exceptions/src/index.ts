@@ -1,10 +1,10 @@
-import {EXCEPTION_CODES} from "./exceptions.codes";
-import { BaseException } from "./exceptions/base.exception";
+import { EXCEPTION_CODES } from './exceptions.codes';
+import { BaseException } from './exceptions/base.exception';
 
-export * from './exceptions.types'
-export * from './exceptions.codes'
+export * from './exceptions.types';
+export * from './exceptions.codes';
 
-export {BaseException}
+export { BaseException };
 
 /**
  * Add new exception codes

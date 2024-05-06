@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import {IExceptionData, IExceptionFieldError} from "../exceptions.types";
+import { IExceptionData, IExceptionFieldError } from '../exceptions.types';
 import { EXCEPTION_CODES } from '../exceptions.codes';
 
 export class BaseException extends Error {
@@ -43,16 +43,14 @@ export class BaseException extends Error {
     return msg;
   }
 
-  public static getExceptionData(exception: (BaseException | Error) & Partial<{status: number}>): IExceptionData {
+  public static getExceptionData(
+    exception: (BaseException | Error) & Partial<{ status: number }>,
+  ): IExceptionData {
     return {
       name: exception.name,
       statusCode:
-        (<BaseException>exception).statusCode ||
-        exception.status ||
-        500,
-      code:
-        (<BaseException>exception).code ||
-        'INTERNAL_SERVER_ERROR',
+        (<BaseException>exception).statusCode || exception.status || 500,
+      code: (<BaseException>exception).code || 'INTERNAL_SERVER_ERROR',
       message: (<BaseException>exception).getMessage
         ? (<BaseException>exception).getMessage()
         : exception.message,
