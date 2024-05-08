@@ -3,8 +3,6 @@ import { IExceptionData, IExceptionFieldError } from '../exceptions.types';
 import { EXCEPTION_CODES } from '../exceptions.codes';
 
 export class BaseException extends Error {
-  public silent = false;
-
   constructor(
     public errorCode: string,
     public statusCode: number,

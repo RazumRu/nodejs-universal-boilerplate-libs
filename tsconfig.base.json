@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "outDir": "./dist",
     "lib": [ "esnext", "dom" ],
-    "types": [ "node" ],
+    "types": [ "node", "jest" ],
     "baseUrl": "./",
     "rootDir": ".",
     "sourceMap": true,
