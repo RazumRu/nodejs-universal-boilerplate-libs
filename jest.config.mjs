@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const tsConfig = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, 'tsconfig.base.json'), 'utf8'),
+  fs.readFileSync(path.resolve(__dirname, 'tsconfig.json'), 'utf8'),
 )
 
 /** @type {import('ts-jest').JestConfigWithTsJest} */

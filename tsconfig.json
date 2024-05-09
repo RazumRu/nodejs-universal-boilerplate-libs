@@ -15,6 +15,7 @@
     "strict": true,
     "strictNullChecks": true,
     "declaration": true,
+    "experimentalDecorators": true,
     "paths": {
       "@packages/*": ["packages/*/src"]
     }
