@@ -1,4 +1,4 @@
-import { BadRequestException } from './bad-request.exception';
+import { BadRequestException } from './bad-request.exception.js';
 
 describe('BadRequestException', () => {
   describe('name', () => {

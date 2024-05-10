@@ -1,14 +1,14 @@
-import { EXCEPTION_CODES } from './exceptions.codes';
-import { BadRequestException } from './exceptions/bad-request.exception';
-import { BaseException } from './exceptions/base.exception';
-import { ForbiddenException } from './exceptions/forbidden.exception';
-import { InternalException } from './exceptions/internal.exception';
-import { NotFoundException } from './exceptions/not-found.exception';
-import { UnauthorizedException } from './exceptions/unauthorized.exception';
-import { ValidationException } from './exceptions/validation.exception';
+import { EXCEPTION_CODES } from './exceptions.codes.js';
+import { BadRequestException } from './exceptions/bad-request.exception.js';
+import { BaseException } from './exceptions/base.exception.js';
+import { ForbiddenException } from './exceptions/forbidden.exception.js';
+import { InternalException } from './exceptions/internal.exception.js';
+import { NotFoundException } from './exceptions/not-found.exception.js';
+import { UnauthorizedException } from './exceptions/unauthorized.exception.js';
+import { ValidationException } from './exceptions/validation.exception.js';
 
-export * from './exceptions.types';
-export * from './exceptions.codes';
+export * from './exceptions.types.js';
+export * from './exceptions.codes.js';
 
 export {
   BaseException,

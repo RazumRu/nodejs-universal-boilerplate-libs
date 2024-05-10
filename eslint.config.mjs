@@ -2,11 +2,22 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import prettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
+import pluginImport from 'eslint-plugin-file-extension-in-import-ts';
 
 export default [
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
+  {
+    plugins: { import: pluginImport },
+    rules: {
+      'import/file-extension-in-import-ts': [
+        'error',
+        'always',
+        { extMapping: {'.ts': '.js' } }
+      ]
+    },
+  },
   prettier,
   {
     rules: {

@@ -1,4 +1,4 @@
-import { BaseException } from './base.exception';
+import { BaseException } from './base.exception.js';
 import { IExceptionFieldError } from '@packages/exceptions';
 
 export class ValidationException extends BaseException {

@@ -1,6 +1,6 @@
 import { LevelWithSilent } from 'pino';
 import { SeverityLevel } from '@sentry/types';
-import { BaseLogger } from './base-logger';
+import { BaseLogger } from './base-logger.js';
 
 export type LogLevel = LevelWithSilent | 'system';
 

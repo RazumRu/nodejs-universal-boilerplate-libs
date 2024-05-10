@@ -3,12 +3,12 @@ import {
   ILoggerModuleParams,
   ISentryLogData,
   LOGGER_PARAMS,
-} from './logger.types';
+} from './logger.types.js';
 import { extraErrorDataIntegration } from '@sentry/integrations';
 import * as process from 'process';
-import { isObject } from 'lodash';
+import { isObject } from 'lodash-es';
 import { Inject, Injectable } from '@nestjs/common';
-import { Logger } from './logger';
+import { Logger } from './logger.js';
 
 @Injectable()
 export class SentryService {

@@ -1,8 +1,8 @@
-import { isObject, isString, isUndefined, pickBy } from 'lodash';
+import { isObject, isString, isUndefined, pickBy } from 'lodash-es';
 import P from 'pino';
 import pretty from 'pino-pretty';
 import { ConsoleLogger, LoggerService } from '@nestjs/common';
-import { ILoggerModuleParams, LogLevel } from './logger.types';
+import { ILoggerModuleParams, LogLevel } from './logger.types.js';
 
 export abstract class BaseLogger
   extends ConsoleLogger
