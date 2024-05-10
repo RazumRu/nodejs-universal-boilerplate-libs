@@ -1,6 +1,6 @@
 import { BaseLogger } from './base-logger.js';
 import { networkInterfaces } from 'os';
-import { ILoggerModuleParams, LOGGER_PARAMS } from './logger.types.js';
+import * as loggerTypes from './logger.types.js';
 import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -8,8 +8,8 @@ export class Logger extends BaseLogger {
   private networkInterfaces = networkInterfaces();
 
   constructor(
-    @Inject(LOGGER_PARAMS)
-    public readonly loggerParams?: ILoggerModuleParams,
+    @Inject(loggerTypes.LOGGER_PARAMS)
+    public readonly loggerParams?: loggerTypes.ILoggerModuleParams,
   ) {
     super(loggerParams);
   }
