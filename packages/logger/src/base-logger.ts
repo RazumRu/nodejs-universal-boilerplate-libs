@@ -10,22 +10,34 @@ export abstract class BaseLogger
 {
   public pino: P.Logger<'system'>;
 
+  protected level?: LogLevel;
+  protected prettyPrint?: boolean;
+  protected environment?: string;
+  protected appName?: string;
+  protected appVersion?: string;
+
   protected constructor(public params?: ILoggerModuleParams) {
     super();
+
+    this.level = params?.level;
+    this.prettyPrint = params?.prettyPrint;
+    this.environment = params?.environment;
+    this.appName = params?.appName;
+    this.appVersion = params?.appVersion;
 
     const opt = {
       customLevels: {
         system: 99,
       },
-      name: this.params?.appName,
-      level: this.params?.level || 'info',
+      name: this.appName,
+      level: this.level || 'info',
     };
 
     const stream = pretty({
       colorize: true,
     });
 
-    this.pino = this.params?.prettyPrint ? P(opt, stream) : P(opt);
+    this.pino = this.prettyPrint ? P(opt, stream) : P(opt);
   }
 
   public abstract getCustomPayload?(): any;
@@ -51,9 +63,9 @@ export abstract class BaseLogger
             }
           : undefined,
         level,
-        environment: this.params?.environment,
-        appName: this.params?.appName,
-        appVersion: this.params?.appVersion,
+        environment: this.environment,
+        appName: this.appName,
+        appVersion: this.appVersion,
         data: args?.reduce((acc: any, curr: unknown) => {
           if (isObject(curr)) {
             for (const i in curr) {
