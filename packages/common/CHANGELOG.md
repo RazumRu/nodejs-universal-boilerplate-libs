@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/RazumRu/nodejs-universal-boilerplate-libs/compare/@packages/common@1.1.0...@packages/common@1.1.1) (2024-05-11)
+
+**Note:** Version bump only for package @packages/common
+
 # 1.1.0 (2024-05-11)
 
 ### Features
