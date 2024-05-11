@@ -5,7 +5,7 @@ This repository hosts npm libraries for kick-starting a NestJS application.
 
 ## Prerequisites
 - Node.js 20.x
-- Yarn 3 with Corepack
+- Yarn 4 with Corepack
 
 ## Installation
 
