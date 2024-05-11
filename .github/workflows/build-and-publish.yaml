@@ -44,6 +44,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn run build:all
           yarn lerna publish --no-private --yes

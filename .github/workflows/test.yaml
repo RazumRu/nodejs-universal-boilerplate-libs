@@ -31,8 +31,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install node modules
-        run: |
-          yarn install
+        run: yarn install --immutable
 
       - name: Test
         run: |

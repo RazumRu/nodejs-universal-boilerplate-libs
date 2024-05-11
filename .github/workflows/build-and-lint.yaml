@@ -33,13 +33,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install node modules
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 5
-          max_attempts: 3
-          retry_on: exceptions
-          command: |
-            yarn install --frozen-lockfile --prefer-offline
+        run: yarn install --immutable
 
       - name: Build and lint
         run: |
