@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Build and publish
     steps:
-      - uses: tibdex/github-app-token@v2
+      - uses: tibdex/github-app-token@v1
         id: generate_token
         with:
           app_id: ${{ secrets.BOT_APPLICATION_ID }}
