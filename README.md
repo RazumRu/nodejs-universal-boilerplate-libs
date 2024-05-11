@@ -27,7 +27,7 @@ Learn more about TurboRepo and how to use it here: https://turborepo.org/docs
 
 ## Committing Code
 
-We use Commitlint and Husky to ensure commit standards:
+We are using Commitlint and Husky to ensure commit standards:
 
 - Commitlint checks if your commit messages meet the conventional commit format.
 - Husky enforces these rules pre-commit, making sure bad commits are never pushed.
