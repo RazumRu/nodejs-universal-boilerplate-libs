@@ -32,6 +32,11 @@ jobs:
           node-version: '20.x'
           cache: 'yarn'
 
+      - name: Enable Corepack and Configure Yarn
+        run: |
+          corepack enable
+          corepack install --global yarn@4
+
       - name: Fetch git tag refs
         run: git fetch --all --tags
 

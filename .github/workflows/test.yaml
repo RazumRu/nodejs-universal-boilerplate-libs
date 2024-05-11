@@ -24,6 +24,11 @@ jobs:
         with:
           node-version: "20.x"
           cache: 'yarn'
+          
+      - name: Enable Corepack and Configure Yarn
+        run: |
+          corepack enable
+          corepack install --global yarn@4
 
       - name: Install node modules
         run: |
