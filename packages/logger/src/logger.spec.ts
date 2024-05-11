@@ -1,4 +1,4 @@
-import { Logger } from './logger.js';
+import { Logger } from './logger';
 import 'jest-extended';
 
 describe(Logger, () => {

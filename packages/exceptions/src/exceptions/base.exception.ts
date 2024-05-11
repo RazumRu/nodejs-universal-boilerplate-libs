@@ -1,6 +1,6 @@
-import { get } from 'lodash-es';
-import { IExceptionData, IExceptionFieldError } from '../exceptions.types.js';
-import { EXCEPTION_CODES } from '../exceptions.codes.js';
+import { get } from 'lodash';
+import { IExceptionData, IExceptionFieldError } from '../exceptions.types';
+import { EXCEPTION_CODES } from '../exceptions.codes';
 
 export class BaseException extends Error {
   constructor(

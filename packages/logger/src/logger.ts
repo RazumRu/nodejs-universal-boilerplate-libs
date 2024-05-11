@@ -1,6 +1,6 @@
-import { BaseLogger } from './base-logger.js';
+import { BaseLogger } from './base-logger';
 import { networkInterfaces } from 'os';
-import * as loggerTypes from './logger.types.js';
+import * as loggerTypes from './logger.types';
 import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()

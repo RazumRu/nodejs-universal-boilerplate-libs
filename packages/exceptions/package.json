@@ -5,7 +5,6 @@
   "types": "dist/index.d.ts",
   "author": "Sergey Razumovskiy <s.razumru@gmail.com>",
   "license": "ISC",
-  "type": "module",
   "scripts": {
     "build": "yarn run prebuild && yarn tsc -p tsconfig.build.json",
     "prebuild": "rimraf -rf ./dist && rimraf ./tsconfig.build.tsbuildinfo",
@@ -13,14 +12,14 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/lodash-es": "^4",
+    "@types/lodash": "^4",
     "@types/node": "^20.12.8",
     "jest": "^29.7.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
+    "lodash": "^4.17.21",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   }

@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "target": "ESNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2020",
     "isolatedModules": true,
     "esModuleInterop": true,
     "outDir": "./dist",
-    "lib": [ "esnext", "dom" ],
+    "lib": [ "dom" ],
     "types": [ "node", "jest" ],
     "baseUrl": "./",
     "rootDir": ".",
@@ -17,6 +17,7 @@
     "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "paths": {
       "@packages/*": ["packages/*/src"]
     }

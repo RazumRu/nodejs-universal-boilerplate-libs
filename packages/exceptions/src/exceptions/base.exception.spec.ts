@@ -1,4 +1,4 @@
-import { BaseException } from './base.exception.js';
+import { BaseException } from './base.exception';
 
 describe('BaseException', () => {
   describe('getFullMessage', () => {

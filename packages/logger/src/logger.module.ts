@@ -1,6 +1,6 @@
-import { ILoggerModuleParams, LOGGER, LOGGER_PARAMS } from './logger.types.js';
-import { Logger } from './logger.js';
-import { SentryService } from './sentry.service.js';
+import { ILoggerModuleParams, LOGGER, LOGGER_PARAMS } from './logger.types';
+import { Logger } from './logger';
+import { SentryService } from './sentry.service';
 import { DynamicModule, Global } from '@nestjs/common';
 
 @Global()
