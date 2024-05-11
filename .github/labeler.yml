@@ -1,0 +1,52 @@
+version: v1
+
+labels:
+  - label: "BREAKING_CHANGE"
+    sync: true
+    matcher:
+      commits: ".*BREAKING CHANGE.*"
+      body: ".*BREAKING CHANGE.*"
+
+  - label: "feature"
+    sync: true
+    matcher:
+      branch: "^feat(ure)?/.*"
+
+  - label: "fix"
+    sync: true
+    matcher:
+      branch: "^(hot)?fix/.*"
+
+  - label: "hotfix"
+    sync: true
+    matcher:
+      branch: "^hotfix/.*"
+
+  - label: "chore"
+    sync: true
+    matcher:
+      branch: "^chore/.*"
+
+  - label: "refactor"
+    sync: true
+    matcher:
+      branch: "^refactor/.*"
+
+  - label: "dependabot"
+    sync: true
+    matcher:
+      baseBranch: "^dependabot/.*"
+
+#checks:
+#  - context: "Labels Check"
+#    description:
+#      success: "Ready for review & merge"
+#      failure: "Missing labels"
+#    labels:
+#      any:
+#        - feature
+#        - fix
+#        - chore
+#        - dependabot
+#        - refactor
+#        - release
