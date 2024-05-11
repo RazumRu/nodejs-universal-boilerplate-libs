@@ -1,0 +1,41 @@
+# Build and lint pps and changed packages
+
+name: Build and lint
+
+on:
+  pull_request:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build_and_lint:
+    runs-on: ubuntu-22.04
+    name: Build and lint
+    timeout-minutes: 15
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: '0'
+
+      - name: Enable Corepack and Configure Yarn
+        run: |
+          corepack enable
+          corepack install --global yarn@4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'yarn'
+
+      - name: Install node modules
+        run: yarn install --immutable
+
+      - name: Build and lint
+        run: |
+          yarn run build:all
+          yarn run lint:all

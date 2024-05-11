@@ -1,0 +1,16 @@
+{
+  "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "version": {
+      "ignoreChanges": [".github/**/*", "scripts/**/*", "**/*.md"],
+      "message": "chore(release): update packages",
+      "conventionalCommits": true,
+      "changelogPreset": "angular"
+    },
+    "publish": {
+      "ignoreChanges": [".github/**/*", "scripts/**/*", "**/*.md"]
+    }
+  }
+}
