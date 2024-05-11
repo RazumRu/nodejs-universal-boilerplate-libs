@@ -52,4 +52,4 @@ jobs:
         run: |
           yarn install --immutable
           yarn run build:all
-          yarn lerna publish --no-private --yes
+          yarn lerna version --yes

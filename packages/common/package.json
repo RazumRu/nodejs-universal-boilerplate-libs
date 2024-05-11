@@ -7,8 +7,7 @@
   "license": "ISC",
   "scripts": {
     "build": "yarn run prebuild && yarn tsc -p tsconfig.build.json",
-    "prebuild": "rimraf -rf ./dist && rimraf ./tsconfig.build.tsbuildinfo",
-    "prepublish": "yarn run build"
+    "prebuild": "rimraf -rf ./dist && rimraf ./tsconfig.build.tsbuildinfo"
   },
   "devDependencies": {
     "@nestjs/testing": "^10.3.8",
