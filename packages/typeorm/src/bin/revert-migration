@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const { exec } = require('child_process');
+exec(
+  `node ${__dirname}/../scripts/migration.mjs revert ${process.argv
+    .slice(2)
+    .join(' ')}`.trim(),
+  (err, out, errOut) => {
+    console.log(err, out, errOut);
+  },
+);
