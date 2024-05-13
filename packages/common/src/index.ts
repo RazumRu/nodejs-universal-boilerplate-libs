@@ -1,11 +1,10 @@
 import { AppBootstrapperModule } from './app-bootstrapper.module';
 import { NestFactory } from '@nestjs/core';
 import { IAppBootstrapperParams } from './app-bootstrapper.types';
-import { bootstrapHttpServer } from './http-server/index';
 import { boolean, isBooleanable } from 'boolean';
 import { isUndefined } from 'lodash';
+import { bootstrapHttpServer } from '@packages/http-server';
 
-export * from './http-server/transformers';
 export { AppBootstrapperModule };
 
 export const bootstrap = (modules: any[], params: IAppBootstrapperParams) => {

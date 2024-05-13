@@ -29,7 +29,7 @@ export class AllExceptionsFilter extends BaseExceptionFilter {
 
     response.status(data.statusCode).send({
       statusCode: data.statusCode,
-      code: data.code,
+      errorCode: data.code,
       message: data.message,
       fullMessage: data.fullMessage,
       fields: data.fields,

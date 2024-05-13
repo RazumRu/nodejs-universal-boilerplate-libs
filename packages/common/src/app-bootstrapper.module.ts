@@ -2,6 +2,7 @@ import { DynamicModule, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from '@packages/logger';
 import { IAppBootstrapperParams } from './app-bootstrapper.types';
+import { RequestContextLogger } from '@packages/http-server';
 
 @Module({})
 export class AppBootstrapperModule {
@@ -21,6 +22,9 @@ export class AppBootstrapperModule {
           environment: params.environment,
           appName: params.appName,
           appVersion: params.appVersion,
+          customInstance:
+            params.logger?.customInstance ||
+            (params.httpServer ? RequestContextLogger : undefined),
         }),
         ...bootstrapModules,
       ],

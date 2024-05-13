@@ -1,5 +1,5 @@
+import { IHttpServerInitParams } from '@packages/http-server';
 import { ILoggerModuleParams } from '@packages/logger';
-import { IHttpServerInitParams } from './http-server/http-server.types';
 
 export interface IAppBootstrapperParams {
   environment: string;

@@ -13,6 +13,7 @@ import { Logger } from './logger';
 @Injectable()
 export class SentryService {
   private isSentryInit = false;
+  private isWarningSent = false;
 
   constructor(
     @Inject(LOGGER_PARAMS)
@@ -22,7 +23,7 @@ export class SentryService {
 
   public send(err: Error, data?: ISentryLogData) {
     if (!this.isSentryInit) {
-      return;
+      this.init();
     }
 
     const scope = Sentry.getCurrentScope();
@@ -75,7 +76,16 @@ export class SentryService {
     Sentry.captureException(err);
   }
 
-  public init(dsn: string) {
+  public init() {
+    const dsn = this.loggerParams?.sentryDsn;
+    if (!dsn) {
+      if (!this.isWarningSent) {
+        this.logger.warn('Sentry cannot be used without dsn');
+      }
+
+      return;
+    }
+
     this.logger.system('Init sentry');
 
     Sentry.init({

@@ -32,3 +32,6 @@ We are using Commitlint and Husky to ensure commit standards:
 - Commitlint checks if your commit messages meet the conventional commit format.
 - Husky enforces these rules pre-commit, making sure bad commits are never pushed.
 
+## Version Management with Lerna
+
+Our projects use Lerna for managing package versions efficiently. Lerna automatically recognizes semantic versioning conventions and updates versions during the continuous integration (CI) process.

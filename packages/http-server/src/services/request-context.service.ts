@@ -15,7 +15,6 @@ export class RequestContextService {
     const requestId = (rTracer?.id() as string) || '';
 
     return {
-      userId: (<any>this.request).__contextData?.userId,
       requestId,
       ip: this.request.ip,
       method: this.request.method,

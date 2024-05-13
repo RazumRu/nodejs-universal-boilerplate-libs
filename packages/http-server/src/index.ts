@@ -26,6 +26,7 @@ export * from './pipes/array-validation.pipe';
 export * from './pipes/validation.pipe';
 export * from './services/exception-handler';
 export * from './services/request-context-logger.service';
+export * from './utils/transformers';
 
 const setupSwagger = (
   app: INestApplication,
