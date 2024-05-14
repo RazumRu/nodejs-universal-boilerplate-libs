@@ -2,6 +2,8 @@
 
 This package provides a module for integrating and managing `TypeORM` within your projects.
 
+[Example usage](https://github.com/RazumRu/example-application)
+
 ## Migration Commands
 
 Leverage the following commands to manage database migrations, mirroring the functionality of the `@nestjs/typeorm` CLI. Add these commands to your `package.json` scripts for ease of use:
