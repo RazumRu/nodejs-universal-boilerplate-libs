@@ -1,4 +1,5 @@
 import { AuditEntity } from './entity/audit.entity';
+import { TimestampsEntity } from './entity/timestamps.entity';
 
 export const getRepositoryMock = (): any => {
   const instance: any = {
@@ -44,6 +45,10 @@ export const getRepositoryMock = (): any => {
 
 export const buildAuditEntityMockFields = (): AuditEntity => ({
   createdBy: 'createdBy',
+  ...buildTimestampsEntityMockFields(),
+});
+
+export const buildTimestampsEntityMockFields = (): TimestampsEntity => ({
   createdAt: new Date(),
   updatedAt: new Date(),
   deletedAt: null,
